@@ -1,6 +1,6 @@
 # Site settings
 title: Drew Blessing
-email: drew@blessing.io
+email: drew_web@blessing.io
 description: > # this means to ignore newlines until "baseurl:"
   System Administrator by trade. Developer and open-source enthusiast at heart.
   Posts may cover DevOps, Chef, GitLab, Ruby, various open-source projects
