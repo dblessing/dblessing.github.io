@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Drew Blessing</title>
-    <description>Interested in operations, automation, development and open-source. Posts may cover DevOps, Chef, GitLab, Ruby, various open-source projects and whatever else I&#39;m interested in at the time.
+    <description>System Administrator by trade. Developer and open-source enthusiast at heart. Posts may cover DevOps, Chef, GitLab, Ruby, various open-source projects and whatever else I&#39;m interested in at the time.
 </description>
     <link>http://blessing.io/</link>
     <atom:link href="http://blessing.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 09 May 2015 16:42:54 -0500</pubDate>
-    <lastBuildDate>Sat, 09 May 2015 16:42:54 -0500</lastBuildDate>
+    <pubDate>Sat, 09 May 2015 16:45:43 -0500</pubDate>
+    <lastBuildDate>Sat, 09 May 2015 16:45:43 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
