@@ -1,0 +1,14 @@
+# Site settings
+title: Drew Blessing
+email: drew@blessing.io
+description: > # this means to ignore newlines until "baseurl:"
+  Interested in operations, automation, development and open-source.
+  Posts may cover DevOps, Chef, GitLab, Ruby, various open-source projects
+  and whatever else I'm interested in at the time.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://blessing.io" # the base hostname & protocol for your site
+twitter_username: drewblessing
+github_username:  dblessing
+
+# Build settings
+markdown: kramdown
