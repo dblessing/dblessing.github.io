@@ -16,7 +16,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   font-weight: 300;
-  color: #111111;
+  color: #2c3e50;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%; }
 
@@ -70,7 +70,7 @@ a {
   a:visited {
     color: #1756a9; }
   a:hover {
-    color: #111111;
+    color: #2c3e50;
     text-decoration: underline; }
 
 /**
