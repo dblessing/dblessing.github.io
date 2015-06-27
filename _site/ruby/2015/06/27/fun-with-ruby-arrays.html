@@ -150,6 +150,8 @@ That seems fine, but what happened to <code>desired_rules</code> (remember, the 
 <p><code>desired_rules</code> elements still shift one index forward but we&#39;re iterating over a clone that is unaffected by the
 delete action.</p>
 
+<hr>
+
 <p>My friend Stuart (@McCroden) is working with Swift and came across an interesting
 <a href="http://stackoverflow.com/questions/25699987/selectively-remove-and-delete-objects-from-a-nsmutablearray-in-swift">Stack Overflow answer</a>
 suggesting reverse iteration to avoid this problem. That&#39;s a neat way to get around this, too.</p>

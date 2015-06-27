@@ -102,6 +102,8 @@ end
 `desired_rules` elements still shift one index forward but we're iterating over a clone that is unaffected by the
 delete action.
 
+* * *
+
 My friend Stuart (@McCroden) is working with Swift and came across an interesting
 [Stack Overflow answer](http://stackoverflow.com/questions/25699987/selectively-remove-and-delete-objects-from-a-nsmutablearray-in-swift)
 suggesting reverse iteration to avoid this problem. That's a neat way to get around this, too.
