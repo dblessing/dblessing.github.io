@@ -11,4 +11,4 @@ twitter_username: drewblessing
 github_username:  dblessing
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
