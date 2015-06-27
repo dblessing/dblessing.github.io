@@ -5,8 +5,6 @@ date:   2015-06-27 12:50:00
 categories: ruby
 ---
 
-# Fun with Ruby Arrays
-
 This week alone I have lost hours of my life to strange behavior with Ruby arrays and hashes.
 Now that I know what's going on it all makes sense but I can see how someone can easily be
 confused by this. I'm sharing it in hopes that others might avoid the same pitfall
