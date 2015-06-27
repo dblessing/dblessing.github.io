@@ -67,11 +67,12 @@ Now that I know what&#39;s going on it all makes sense but I can see how someone
 confused by this. I&#39;m sharing it in hopes that others might avoid the same pitfall
 and as a reminder to myself in the future.</p>
 
-<p>The issue I ran into involves iteration. Specifically, while iterating over an array
+<p>The issue I ran into involves iteration. While iterating over an array
 I was also selectively deleting that item from the array if it matched some criteria. What I found
 is that I was &#39;randomly&#39; failing to iterate over some values in my array.</p>
 
-<p>Here&#39;s an example of what I was doing:</p>
+<p>Below is an example of what I was doing. For context, I was writing AWS Network ACL support for
+<code>chef-provisioning-aws</code>.</p>
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">current_rules</span> <span class="o">=</span> <span class="o">[</span>
   <span class="p">{</span>
     <span class="ss">rule_number</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>

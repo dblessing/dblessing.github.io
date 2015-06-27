@@ -10,11 +10,12 @@ Now that I know what's going on it all makes sense but I can see how someone can
 confused by this. I'm sharing it in hopes that others might avoid the same pitfall
 and as a reminder to myself in the future.
 
-The issue I ran into involves iteration. Specifically, while iterating over an array
+The issue I ran into involves iteration. While iterating over an array
 I was also selectively deleting that item from the array if it matched some criteria. What I found
 is that I was 'randomly' failing to iterate over some values in my array.
 
-Here's an example of what I was doing:
+Below is an example of what I was doing. For context, I was writing AWS Network ACL support for
+`chef-provisioning-aws`.
 
 ```ruby
 current_rules = [
