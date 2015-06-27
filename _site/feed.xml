@@ -6,8 +6,8 @@
 </description>
     <link>http://blessing.io/</link>
     <atom:link href="http://blessing.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 27 Jun 2015 13:33:13 -0500</pubDate>
-    <lastBuildDate>Sat, 27 Jun 2015 13:33:13 -0500</lastBuildDate>
+    <pubDate>Sat, 27 Jun 2015 13:35:05 -0500</pubDate>
+    <lastBuildDate>Sat, 27 Jun 2015 13:35:05 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -100,6 +100,10 @@ iterating over?&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;code&gt;desired_rules&lt;/code&gt; elements still shift one index forward but we&amp;#39;re iterating over a clone that is unaffected by the
 delete action.&lt;/p&gt;
+
+&lt;p&gt;My friend Stuart (@McCroden) is working with Swift and came across an interesting
+&lt;a href=&quot;http://stackoverflow.com/questions/25699987/selectively-remove-and-delete-objects-from-a-nsmutablearray-in-swift&quot;&gt;Stack Overflow answer&lt;/a&gt;
+suggesting reverse iteration to avoid this problem. That&amp;#39;s a neat way to get around this, too.&lt;/p&gt;
 
 &lt;p&gt;Special thanks to Christopher Webber (@cwebber) for suggesting this post. It&amp;#39;s a great, small topic to get my blog
 off the ground. I will remember to blog about small issues like this more in the future.&lt;/p&gt;
