@@ -120,10 +120,8 @@ is that I was &#39;randomly&#39; failing to iterate over some values in my array
 <span class="k">end</span>
 </code></pre></div>
 <p>Since <code>current_rules</code> and <code>desired_rules</code> both have <code>rule_number: 100</code> they are deleted from both arrays.
-That seems fine, but what happened when that element got removed from the <code>desired_rules</code> array I am currently
-iterating over?</p>
-
-<p><code>desired_rules</code> now looks like this:</p>
+That seems fine, but what happened to <code>desired_rules</code> (remember, the array I&#39;m currently iterating over)?
+<code>desired_rules</code> now looks like this:</p>
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">[</span>
   <span class="p">{</span>
     <span class="ss">rule_number</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>

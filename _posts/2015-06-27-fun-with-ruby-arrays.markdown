@@ -66,9 +66,7 @@ end
 ```
 
 Since `current_rules` and `desired_rules` both have `rule_number: 100` they are deleted from both arrays.
-That seems fine, but what happened when that element got removed from the `desired_rules` array I am currently
-iterating over?
-
+That seems fine, but what happened to `desired_rules` (remember, the array I'm currently iterating over)?
 `desired_rules` now looks like this:
 
 ```ruby
