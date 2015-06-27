@@ -74,52 +74,73 @@ I was also selectively deleting that item from the array if it matched some crit
 is that I was &#39;randomly&#39; failing to iterate over some values in my array.</p>
 
 <p>Here&#39;s an example of what I was doing:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">current_rules = [
-  { rule_number: 100, action: :deny, protocol: -1, cidr_block: &#39;10.0.0.0/24&#39;, egress: false, port_range: -1 },
-]
-desired_rules = [
-  { rule_number: 100, action: :deny, protocol: -1, cidr_block: &#39;10.0.0.0/24&#39; },
-  { rule_number: 200, action: :allow, protocol: -1, cidr_block: &#39;0.0.0.0/0&#39; },
-  { rule_number: 300, action: :allow, protocol: 6, port_range: 22..23, cidr_block: &#39;172.31.0.0/22&#39; }
-]
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">current_rules</span> <span class="o">=</span> <span class="o">[</span>
+  <span class="p">{</span>
+    <span class="ss">rule_number</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="ss">action</span><span class="p">:</span> <span class="ss">:deny</span><span class="p">,</span>
+    <span class="ss">protocol</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+    <span class="ss">cidr_block</span><span class="p">:</span> <span class="s1">&#39;10.0.0.0/24&#39;</span><span class="p">,</span>
+    <span class="ss">egress</span><span class="p">:</span> <span class="kp">false</span><span class="p">,</span>
+    <span class="ss">port_range</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span>
+  <span class="p">}</span>
+<span class="o">]</span>
+<span class="n">desired_rules</span> <span class="o">=</span> <span class="o">[</span>
+  <span class="p">{</span>
+    <span class="ss">rule_number</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="ss">action</span><span class="p">:</span> <span class="ss">:deny</span><span class="p">,</span>
+    <span class="ss">protocol</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+    <span class="ss">cidr_block</span><span class="p">:</span> <span class="s1">&#39;10.0.0.0/24&#39;</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="ss">rule_number</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="ss">action</span><span class="p">:</span> <span class="ss">:allow</span><span class="p">,</span>
+    <span class="ss">protocol</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+    <span class="ss">cidr_block</span><span class="p">:</span> <span class="s1">&#39;0.0.0.0/0&#39;</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="ss">rule_number</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+    <span class="ss">action</span><span class="p">:</span> <span class="ss">:allow</span><span class="p">,</span>
+    <span class="ss">protocol</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="ss">port_range</span><span class="p">:</span> <span class="mi">22</span><span class="o">.</span><span class="n">.</span><span class="mi">23</span><span class="p">,</span>
+    <span class="ss">cidr_block</span><span class="p">:</span> <span class="s1">&#39;172.31.0.0/22&#39;</span>
+  <span class="p">}</span>
+<span class="o">]</span>
 
-desired_rules.each do |desired_rule|
-  # The array elements (hashes) don&#39;t match exactly. Rule number match is what we&#39;re looking for,
-  # but the rest of the hash keys will be different.
-  matching_rule = current_rules.select { |r| r[:rule_number] == desired_rule[:rule_number]}.first
-  if matching_rule
-    # Anything unhandled will be removed
-    current_rules.delete(matching_rule)
-    # Anything unhandled will be added
-    desired_rules.delete(desired_rule)
+<span class="n">desired_rules</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">desired_rule</span><span class="o">|</span>
+  <span class="c1"># The array elements (hashes) don&#39;t match exactly.</span>
+  <span class="c1"># Rule number match is what we&#39;re looking for,</span>
+  <span class="c1"># but the rest of the hash keys will be different.</span>
+  <span class="n">matching_rule</span> <span class="o">=</span> <span class="n">current_rules</span>
+    <span class="o">.</span><span class="n">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">r</span><span class="o">|</span> <span class="n">r</span><span class="o">[</span><span class="ss">:rule_number</span><span class="o">]</span> <span class="o">==</span> <span class="n">desired_rule</span><span class="o">[</span><span class="ss">:rule_number</span><span class="o">]</span><span class="p">}</span><span class="o">.</span><span class="n">first</span>
 
-    if matching_rule.merge(desired_rule) != matching_rule
-      # Replace anything with a matching rule number but different attributes
-      replace_rules &lt;&lt; desired_rule
-    end
-  end
-end
+  <span class="k">if</span> <span class="n">matching_rule</span>
+    <span class="c1"># Anything unhandled will be removed</span>
+    <span class="n">current_rules</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">matching_rule</span><span class="p">)</span>
+    <span class="c1"># Anything unhandled will be added</span>
+    <span class="n">desired_rules</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">desired_rule</span><span class="p">)</span>
+
+    <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+  <span class="k">end</span>
+<span class="k">end</span>
 </code></pre></div>
 <p>Since <code>current_rules</code> and <code>desired_rules</code> both have <code>rule_number: 100</code> they are deleted from both arrays.
 That seems fine, but what happened when that element got removed from the <code>desired_rules</code> array I am currently
 iterating over?</p>
 
-<p><code>desired_rules</code> now looks like this:
-<code>
-[
-  {:rule_number=&gt;200, :action=&gt;:allow, :protocol=&gt;-1, :cidr_block=&gt;&quot;0.0.0.0/0&quot;},
-  {:rule_number=&gt;300, :action=&gt;:allow, :protocol=&gt;6, :port_range=&gt;22..23, :cidr_block=&gt;&quot;172.31.0.0/22&quot;}
-]
-</code></p>
-
+<p><code>desired_rules</code> now looks like this:</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">[</span>
+  <span class="p">{</span><span class="ss">:rule_number</span><span class="o">=&gt;</span><span class="mi">200</span><span class="p">,</span> <span class="ss">:action</span><span class="o">=&gt;</span><span class="ss">:allow</span><span class="p">,</span> <span class="ss">:protocol</span><span class="o">=&gt;-</span><span class="mi">1</span><span class="p">,</span> <span class="ss">:cidr_block</span><span class="o">=&gt;</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">},</span>
+  <span class="p">{</span><span class="ss">:rule_number</span><span class="o">=&gt;</span><span class="mi">300</span><span class="p">,</span> <span class="ss">:action</span><span class="o">=&gt;</span><span class="ss">:allow</span><span class="p">,</span> <span class="ss">:protocol</span><span class="o">=&gt;</span><span class="mi">6</span><span class="p">,</span> <span class="ss">:port_range</span><span class="o">=&gt;</span><span class="mi">22</span><span class="o">.</span><span class="n">.</span><span class="mi">23</span><span class="p">,</span> <span class="ss">:cidr_block</span><span class="o">=&gt;</span><span class="s2">&quot;172.31.0.0/22&quot;</span><span class="p">}</span>
+<span class="o">]</span>
+</code></pre></div>
 <p>All the remaining elements in the array shifted forwarded by one index. Element with
 <code>rule_number: 200</code> shifted from index <code>1</code> to index <code>0</code>. The next iteration over the array is index <code>1</code>, now
 <code>rule_number: 300</code>. Whoops!</p>
 
 <p>Knowing the issue here is most of the battle. The solution is rather easy - just clone the array before iterating:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">desired_rules.clone.each do |desired_rule|
-  ...
-end
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">desired_rules</span><span class="o">.</span><span class="n">clone</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">desired_rule</span><span class="o">|</span>
+  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+<span class="k">end</span>
 </code></pre></div>
 <p><code>desired_rules</code> elements still shift one index forward but we&#39;re iterating over a clone that is unaffected by the
 delete action.</p>
