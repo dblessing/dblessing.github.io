@@ -107,9 +107,6 @@ is that I was &#39;randomly&#39; failing to iterate over some values in my array
 <span class="o">]</span>
 
 <span class="n">desired_rules</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">desired_rule</span><span class="o">|</span>
-  <span class="c1"># The array elements (hashes) don&#39;t match exactly.</span>
-  <span class="c1"># Rule number match is what we&#39;re looking for,</span>
-  <span class="c1"># but the rest of the hash keys will be different.</span>
   <span class="n">matching_rule</span> <span class="o">=</span> <span class="n">current_rules</span>
     <span class="o">.</span><span class="n">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">r</span><span class="o">|</span> <span class="n">r</span><span class="o">[</span><span class="ss">:rule_number</span><span class="o">]</span> <span class="o">==</span> <span class="n">desired_rule</span><span class="o">[</span><span class="ss">:rule_number</span><span class="o">]</span><span class="p">}</span><span class="o">.</span><span class="n">first</span>
 
@@ -129,8 +126,19 @@ iterating over?</p>
 
 <p><code>desired_rules</code> now looks like this:</p>
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">[</span>
-  <span class="p">{</span><span class="ss">:rule_number</span><span class="o">=&gt;</span><span class="mi">200</span><span class="p">,</span> <span class="ss">:action</span><span class="o">=&gt;</span><span class="ss">:allow</span><span class="p">,</span> <span class="ss">:protocol</span><span class="o">=&gt;-</span><span class="mi">1</span><span class="p">,</span> <span class="ss">:cidr_block</span><span class="o">=&gt;</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">},</span>
-  <span class="p">{</span><span class="ss">:rule_number</span><span class="o">=&gt;</span><span class="mi">300</span><span class="p">,</span> <span class="ss">:action</span><span class="o">=&gt;</span><span class="ss">:allow</span><span class="p">,</span> <span class="ss">:protocol</span><span class="o">=&gt;</span><span class="mi">6</span><span class="p">,</span> <span class="ss">:port_range</span><span class="o">=&gt;</span><span class="mi">22</span><span class="o">.</span><span class="n">.</span><span class="mi">23</span><span class="p">,</span> <span class="ss">:cidr_block</span><span class="o">=&gt;</span><span class="s2">&quot;172.31.0.0/22&quot;</span><span class="p">}</span>
+  <span class="p">{</span>
+    <span class="ss">rule_number</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+    <span class="ss">action</span><span class="p">:</span> <span class="ss">:allow</span><span class="p">,</span>
+    <span class="ss">protocol</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+    <span class="ss">cidr_block</span><span class="p">:</span> <span class="s1">&#39;0.0.0.0/0&#39;</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="ss">rule_number</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+    <span class="ss">action</span><span class="p">:</span> <span class="ss">:allow</span><span class="p">,</span>
+    <span class="ss">protocol</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="ss">port_range</span><span class="p">:</span> <span class="mi">22</span><span class="o">.</span><span class="n">.</span><span class="mi">23</span><span class="p">,</span>
+    <span class="ss">cidr_block</span><span class="p">:</span> <span class="s1">&#39;172.31.0.0/22&#39;</span>
+  <span class="p">}</span>
 <span class="o">]</span>
 </code></pre></div>
 <p>All the remaining elements in the array shifted forwarded by one index. Element with
@@ -147,6 +155,9 @@ delete action.</p>
 
 <p>Special thanks to Christopher Webber (@cwebber) for suggesting this post. It&#39;s a great, small topic to get my blog
 off the ground. I will remember to blog about small issues like this more in the future.</p>
+
+<p>Unfortunately I don&#39;t have comments enabled on my blog yet. If you have comments, please send them to @drewblessing
+on Twitter.</p>
 
   </article>
 

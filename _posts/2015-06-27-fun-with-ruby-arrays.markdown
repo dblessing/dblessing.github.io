@@ -52,9 +52,6 @@ desired_rules = [
 ]
 
 desired_rules.each do |desired_rule|
-  # The array elements (hashes) don't match exactly.
-  # Rule number match is what we're looking for,
-  # but the rest of the hash keys will be different.
   matching_rule = current_rules
     .select { |r| r[:rule_number] == desired_rule[:rule_number]}.first
 
@@ -77,8 +74,19 @@ iterating over?
 
 ```ruby
 [
-  {:rule_number=>200, :action=>:allow, :protocol=>-1, :cidr_block=>"0.0.0.0/0"},
-  {:rule_number=>300, :action=>:allow, :protocol=>6, :port_range=>22..23, :cidr_block=>"172.31.0.0/22"}
+  {
+    rule_number: 200,
+    action: :allow,
+    protocol: -1,
+    cidr_block: '0.0.0.0/0'
+  },
+  {
+    rule_number: 300,
+    action: :allow,
+    protocol: 6,
+    port_range: 22..23,
+    cidr_block: '172.31.0.0/22'
+  }
 ]
 ```
 
@@ -99,3 +107,6 @@ delete action.
 
 Special thanks to Christopher Webber (@cwebber) for suggesting this post. It's a great, small topic to get my blog
 off the ground. I will remember to blog about small issues like this more in the future.
+
+Unfortunately I don't have comments enabled on my blog yet. If you have comments, please send them to @drewblessing
+on Twitter.
