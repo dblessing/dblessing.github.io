@@ -6,20 +6,18 @@
 </description>
     <link>http://blessing.io/</link>
     <atom:link href="http://blessing.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 27 Jun 2015 13:31:30 -0500</pubDate>
-    <lastBuildDate>Sat, 27 Jun 2015 13:31:30 -0500</lastBuildDate>
+    <pubDate>Sat, 27 Jun 2015 13:33:13 -0500</pubDate>
+    <lastBuildDate>Sat, 27 Jun 2015 13:33:13 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>Fun with Ruby Arrays</title>
-        <description>&lt;p&gt;This week alone I have lost hours of my life to strange behavior with Ruby arrays and hashes.
+        <description>&lt;p&gt;Last night I lost hours of my life to strange behavior with Ruby arrays.
 Now that I know what&amp;#39;s going on it all makes sense but I can see how someone can easily be
 confused by this. I&amp;#39;m sharing it in hopes that others might avoid the same pitfall
 and as a reminder to myself in the future.&lt;/p&gt;
 
-&lt;h2&gt;Arrays&lt;/h2&gt;
-
-&lt;p&gt;The issue I ran into with arrays involves iteration. Specifically, while iterating over an array
+&lt;p&gt;The issue I ran into involves iteration. Specifically, while iterating over an array
 I was also selectively deleting that item from the array if it matched some criteria. What I found
 is that I was &amp;#39;randomly&amp;#39; failing to iterate over some values in my array.&lt;/p&gt;
 

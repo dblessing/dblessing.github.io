@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Fun with Ruby Arrays</title>
-  <meta name="description" content="This week alone I have lost hours of my life to strange behavior with Ruby arrays and hashes.Now that I know what&#39;s going on it all makes sense but I can...">
+  <meta name="description" content="Last night I lost hours of my life to strange behavior with Ruby arrays.Now that I know what&#39;s going on it all makes sense but I can see how someone can ...">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://blessing.io/ruby/2015/06/27/fun-with-ruby-arrays.html">
@@ -62,14 +62,12 @@
   </header>
 
   <article class="post-content">
-    <p>This week alone I have lost hours of my life to strange behavior with Ruby arrays and hashes.
+    <p>Last night I lost hours of my life to strange behavior with Ruby arrays.
 Now that I know what&#39;s going on it all makes sense but I can see how someone can easily be
 confused by this. I&#39;m sharing it in hopes that others might avoid the same pitfall
 and as a reminder to myself in the future.</p>
 
-<h2>Arrays</h2>
-
-<p>The issue I ran into with arrays involves iteration. Specifically, while iterating over an array
+<p>The issue I ran into involves iteration. Specifically, while iterating over an array
 I was also selectively deleting that item from the array if it matched some criteria. What I found
 is that I was &#39;randomly&#39; failing to iterate over some values in my array.</p>
 

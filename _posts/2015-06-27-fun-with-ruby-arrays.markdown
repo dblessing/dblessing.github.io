@@ -5,14 +5,12 @@ date:   2015-06-27 12:50:00
 categories: ruby
 ---
 
-This week alone I have lost hours of my life to strange behavior with Ruby arrays and hashes.
+Last night I lost hours of my life to strange behavior with Ruby arrays.
 Now that I know what's going on it all makes sense but I can see how someone can easily be
 confused by this. I'm sharing it in hopes that others might avoid the same pitfall
 and as a reminder to myself in the future.
 
-## Arrays
-
-The issue I ran into with arrays involves iteration. Specifically, while iterating over an array
+The issue I ran into involves iteration. Specifically, while iterating over an array
 I was also selectively deleting that item from the array if it matched some criteria. What I found
 is that I was 'randomly' failing to iterate over some values in my array.
 
