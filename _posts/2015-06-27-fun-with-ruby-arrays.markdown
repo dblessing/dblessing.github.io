@@ -18,7 +18,7 @@ is that I was 'randomly' failing to iterate over some values in my array.
 
 Here's an example of what I was doing:
 
-```ruby
+```
 current_rules = [
   { rule_number: 100, action: :deny, protocol: -1, cidr_block: '10.0.0.0/24', egress: false, port_range: -1 },
 ]
@@ -51,7 +51,7 @@ That seems fine, but what happened when that element got removed from the `desir
 iterating over?
 
 `desired_rules` now looks like this:
-```ruby
+```
 [
   {:rule_number=>200, :action=>:allow, :protocol=>-1, :cidr_block=>"0.0.0.0/0"},
   {:rule_number=>300, :action=>:allow, :protocol=>6, :port_range=>22..23, :cidr_block=>"172.31.0.0/22"}
@@ -64,7 +64,7 @@ All the remaining elements in the array shifted forwarded by one index. Element 
 
 Knowing the issue here is most of the battle. The solution is rather easy - just clone the array before iterating:
 
-```ruby
+```
 desired_rules.clone.each do |desired_rule|
   ...
 end

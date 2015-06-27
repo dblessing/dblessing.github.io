@@ -75,7 +75,7 @@ is that I was ‘randomly’ failing to iterate over some values in my array.</p
 
 <p>Here’s an example of what I was doing:</p>
 
-<p>```ruby
+<p>```
 current_rules = [
   { rule_number: 100, action: :deny, protocol: -1, cidr_block: ‘10.0.0.0/24’, egress: false, port_range: -1 },
 ]
@@ -106,7 +106,7 @@ That seems fine, but what happened when that element got removed from the <code>
 iterating over?</p>
 
 <p><code>desired_rules</code> now looks like this:
-```ruby
+```
 [
   {:rule_number=&gt;200, :action=&gt;:allow, :protocol=&gt;-1, :cidr_block=&gt;”0.0.0.0/0”},</p>
 <p>]
@@ -118,7 +118,7 @@ iterating over?</p>
 
 <p>Knowing the issue here is most of the battle. The solution is rather easy - just clone the array before iterating:</p>
 
-<p><code>ruby
+<p><code>
 desired_rules.clone.each do |desired_rule|
   ...
 end

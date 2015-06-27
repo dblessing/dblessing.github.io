@@ -6,8 +6,8 @@
 </description>
     <link>http://blessing.io/</link>
     <atom:link href="http://blessing.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 27 Jun 2015 13:20:24 -0500</pubDate>
-    <lastBuildDate>Sat, 27 Jun 2015 13:20:24 -0500</lastBuildDate>
+    <pubDate>Sat, 27 Jun 2015 13:20:57 -0500</pubDate>
+    <lastBuildDate>Sat, 27 Jun 2015 13:20:57 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -25,7 +25,7 @@ is that I was ‘randomly’ failing to iterate over some values in my array.&lt
 
 &lt;p&gt;Here’s an example of what I was doing:&lt;/p&gt;
 
-&lt;p&gt;```ruby
+&lt;p&gt;```
 current_rules = [
   { rule_number: 100, action: :deny, protocol: -1, cidr_block: ‘10.0.0.0/24’, egress: false, port_range: -1 },
 ]
@@ -56,7 +56,7 @@ That seems fine, but what happened when that element got removed from the &lt;co
 iterating over?&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;desired_rules&lt;/code&gt; now looks like this:
-```ruby
+```
 [
   {:rule_number=&amp;gt;200, :action=&amp;gt;:allow, :protocol=&amp;gt;-1, :cidr_block=&amp;gt;”0.0.0.0/0”},&lt;/p&gt;
 &lt;p&gt;]
@@ -68,7 +68,7 @@ iterating over?&lt;/p&gt;
 
 &lt;p&gt;Knowing the issue here is most of the battle. The solution is rather easy - just clone the array before iterating:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;ruby
+&lt;p&gt;&lt;code&gt;
 desired_rules.clone.each do |desired_rule|
   ...
 end
