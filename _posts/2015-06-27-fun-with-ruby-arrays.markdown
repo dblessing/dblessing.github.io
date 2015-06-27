@@ -15,7 +15,7 @@ I was also selectively deleting that item from the array if it matched some crit
 is that I was 'randomly' failing to iterate over some values in my array.
 
 Below is an example of what I was doing. For context, I was writing AWS Network ACL support for
-`chef-provisioning-aws`.
+[chef/chef-provisioning-aws](https://github.com/chef/chef-provisioning-aws).
 
 ```ruby
 current_rules = [
@@ -111,5 +111,5 @@ suggesting reverse iteration to avoid this problem. That's a neat way to get aro
 Special thanks to Christopher Webber (@cwebber) for suggesting this post. It's a great, small topic to get my blog
 off the ground. I will remember to blog about small issues like this more in the future.
 
-Unfortunately I don't have comments enabled on my blog yet. If you have comments, please send them to @drewblessing
-on Twitter.
+Unfortunately I don't have comments enabled on my blog yet. If you have comments, please send them to
+[@drewblessing](https://twitter.com/drewblessing) on Twitter.
