@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Testing Chef Vault with ChefSpec"
-date:   2015-07-16 16:00:00
+date:   2015-07-28 16:00:00
 categories: ruby chef-vault chefspec chef
 ---
 
