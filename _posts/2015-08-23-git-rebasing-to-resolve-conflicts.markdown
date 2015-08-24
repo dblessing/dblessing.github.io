@@ -1,13 +1,12 @@
 ---
 layout: post
-title:  "Git Rebasing to Resolve Conflicts: Essentials for contributing"
+title:  "Git Rebasing to Resolve Conflicts"
 date:   2015-08-23je 18:00:00
 categories: git git-rebase open-source
 ---
 
 Four years ago when I first started contributing to open-source projects git was new to me. I quickly
-grasped committing files and pushing to a remote repository. Other than the initial uneasiness with
-contributing code there was one thing that scared me. I was absolutely terrified of seeing the 
+grasped committing files and pushing to a remote repository. However, I was absolutely terrified of seeing the 
 message saying my code couldn't be merged.
 
 ![Merge conflict]({{ site.url }}/images/merge_conflict.png)
@@ -18,7 +17,7 @@ Many times I would fail and completely mess up my work. It was often easier to r
 work than to figure out how to rebase properly and get a clean set of commits pushed. 
 
 Over time I learned some tricks and I now rebase with ease. I'm sharing these tips hoping they help
-eliminate another hurdle new contributors face. After reading this post practice rebasing, be patient
+eliminate another hurdle new contributors face. After reading this post remember to practice rebasing, be patient
 and don't be afraid to ask for help. Project maintainers *should* be understanding and willing to 
 point you in the right direction.
 
@@ -29,8 +28,8 @@ Another common type of rebase is an interactive rebase to squash commits. I will
 
 These tips assume you have created a feature branch off of the master branch for a project. Additionally,
 `origin` refers to your fork while `upstream` refers to the original/upstream project. Both can (should)
-be configured as remotes for your git repository. See "Configuring upstreams"
-below for a tip on how to configure this, if you're not familiar with the concept.
+be configured as remotes for your git repository. If you're not familiar with this concept see "Configuring upstreams"
+below for more information.
 
 First, ensure you have a clean state. That means you have either committed, stashed, or reverted any untracked
 changes. When you run `git status` you should see `nothing to commit, working directory clean`.
@@ -80,16 +79,16 @@ quux
 =======
 bar
 baz
->>>>>>> f78d8ae... Conflicting change
+>>>>>>> f78d8ae... <commit message> 
 ```
 
 The changes between `<<<<<<< HEAD` and `=======` represent changes made in upstream master since your branch
 was checked out. Changes between `=======` and `>>>>>>> f78d8ae... <commit message>` represent
 changes in your branch. Git does not know which order these changes should go in. I cannot
-give you perfect advice on how to resolve any conflict. In some cases you will only want the old changes or 
-the new changes but not both. Over time you will gain a better understanding for how to resolve this 
-problem. In this case we want both changes but need to adjust ordering slightly. We remove the markers
-and make the 'code' look like something we want:
+give you perfect advice on how to resolve every conflict. You may only want the old changes, 
+the new changes, or both. Over time you will gain a better understanding for how to resolve this 
+problem. In this case we want both changes but need to adjust ordering slightly. Remove the markers
+and make the 'code' look like something sensible:
 
 ```
 foo
@@ -102,12 +101,12 @@ quux
 Commit this file as you normally would (`git add <files>; git commit -m 'commit message'`) and then run 
 `git rebase --continue`. This will continue replaying commits until another conflict is encountered 
 or all commits have been replayed. Sometimes there
-are many conflicts that must be resolved but hopefully the rebase is smooth. Once complete, you will need
+are many conflicts that must be resolved but hopefully the rebase is smooth. 
+
+Once complete, you will need
 to force push your feature branch to the `origin` (your fork) to update the merge request. Do this by 
 adding a `-f` flag to your push - `git push origin <branch> -f`. Always examine the merge request
-after this operation to ensure the commits and changes are what you expect. Note: Force pushing to your branch
-will update the merge request automatically. You do *not* need to close and create a new merge request. I've seen
-contributors do this and it causes lots of confusion.
+after this operation to ensure the commits and changes are what you expect. 
 
 I hope this helps next time you have to rebase. Please send me a tweet if you have questions. I'm happy to 
 help a new contributor overcome these hurdles.

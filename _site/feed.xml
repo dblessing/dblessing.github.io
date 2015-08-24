@@ -6,15 +6,14 @@
 </description>
     <link>http://blessing.io/</link>
     <atom:link href="http://blessing.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 23 Aug 2015 19:14:15 -0500</pubDate>
-    <lastBuildDate>Sun, 23 Aug 2015 19:14:15 -0500</lastBuildDate>
+    <pubDate>Mon, 24 Aug 2015 06:34:09 -0500</pubDate>
+    <lastBuildDate>Mon, 24 Aug 2015 06:34:09 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
-        <title>Git Rebasing to Resolve Conflicts: Essentials for contributing</title>
+        <title>Git Rebasing to Resolve Conflicts</title>
         <description>&lt;p&gt;Four years ago when I first started contributing to open-source projects git was new to me. I quickly
-grasped committing files and pushing to a remote repository. Other than the initial uneasiness with
-contributing code there was one thing that scared me. I was absolutely terrified of seeing the 
+grasped committing files and pushing to a remote repository. However, I was absolutely terrified of seeing the 
 message saying my code couldn&amp;#39;t be merged.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://blessing.io/images/merge_conflict.png&quot; alt=&quot;Merge conflict&quot;&gt;&lt;/p&gt;
@@ -25,7 +24,7 @@ Many times I would fail and completely mess up my work. It was often easier to r
 work than to figure out how to rebase properly and get a clean set of commits pushed. &lt;/p&gt;
 
 &lt;p&gt;Over time I learned some tricks and I now rebase with ease. I&amp;#39;m sharing these tips hoping they help
-eliminate another hurdle new contributors face. After reading this post practice rebasing, be patient
+eliminate another hurdle new contributors face. After reading this post remember to practice rebasing, be patient
 and don&amp;#39;t be afraid to ask for help. Project maintainers &lt;em&gt;should&lt;/em&gt; be understanding and willing to 
 point you in the right direction.&lt;/p&gt;
 
@@ -36,8 +35,8 @@ Another common type of rebase is an interactive rebase to squash commits. I will
 
 &lt;p&gt;These tips assume you have created a feature branch off of the master branch for a project. Additionally,
 &lt;code&gt;origin&lt;/code&gt; refers to your fork while &lt;code&gt;upstream&lt;/code&gt; refers to the original/upstream project. Both can (should)
-be configured as remotes for your git repository. See &amp;quot;Configuring upstreams&amp;quot;
-below for a tip on how to configure this, if you&amp;#39;re not familiar with the concept.&lt;/p&gt;
+be configured as remotes for your git repository. If you&amp;#39;re not familiar with this concept see &amp;quot;Configuring upstreams&amp;quot;
+below for more information.&lt;/p&gt;
 
 &lt;p&gt;First, ensure you have a clean state. That means you have either committed, stashed, or reverted any untracked
 changes. When you run &lt;code&gt;git status&lt;/code&gt; you should see &lt;code&gt;nothing to commit, working directory clean&lt;/code&gt;.&lt;/p&gt;
@@ -82,15 +81,15 @@ quux
 =======
 bar
 baz
-&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt; f78d8ae... Conflicting change
+&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt; f78d8ae... &amp;lt;commit message&amp;gt; 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;The changes between &lt;code&gt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt; HEAD&lt;/code&gt; and &lt;code&gt;=======&lt;/code&gt; represent changes made in upstream master since your branch
 was checked out. Changes between &lt;code&gt;=======&lt;/code&gt; and &lt;code&gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt; f78d8ae... &amp;lt;commit message&amp;gt;&lt;/code&gt; represent
 changes in your branch. Git does not know which order these changes should go in. I cannot
-give you perfect advice on how to resolve any conflict. In some cases you will only want the old changes or 
-the new changes but not both. Over time you will gain a better understanding for how to resolve this 
-problem. In this case we want both changes but need to adjust ordering slightly. We remove the markers
-and make the &amp;#39;code&amp;#39; look like something we want:&lt;/p&gt;
+give you perfect advice on how to resolve every conflict. You may only want the old changes, 
+the new changes, or both. Over time you will gain a better understanding for how to resolve this 
+problem. In this case we want both changes but need to adjust ordering slightly. Remove the markers
+and make the &amp;#39;code&amp;#39; look like something sensible:&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;foo
 bar
 baz
@@ -100,12 +99,12 @@ quux
 &lt;p&gt;Commit this file as you normally would (&lt;code&gt;git add &amp;lt;files&amp;gt;; git commit -m &amp;#39;commit message&amp;#39;&lt;/code&gt;) and then run 
 &lt;code&gt;git rebase --continue&lt;/code&gt;. This will continue replaying commits until another conflict is encountered 
 or all commits have been replayed. Sometimes there
-are many conflicts that must be resolved but hopefully the rebase is smooth. Once complete, you will need
+are many conflicts that must be resolved but hopefully the rebase is smooth. &lt;/p&gt;
+
+&lt;p&gt;Once complete, you will need
 to force push your feature branch to the &lt;code&gt;origin&lt;/code&gt; (your fork) to update the merge request. Do this by 
 adding a &lt;code&gt;-f&lt;/code&gt; flag to your push - &lt;code&gt;git push origin &amp;lt;branch&amp;gt; -f&lt;/code&gt;. Always examine the merge request
-after this operation to ensure the commits and changes are what you expect. Note: Force pushing to your branch
-will update the merge request automatically. You do &lt;em&gt;not&lt;/em&gt; need to close and create a new merge request. I&amp;#39;ve seen
-contributors do this and it causes lots of confusion.&lt;/p&gt;
+after this operation to ensure the commits and changes are what you expect. &lt;/p&gt;
 
 &lt;p&gt;I hope this helps next time you have to rebase. Please send me a tweet if you have questions. I&amp;#39;m happy to 
 help a new contributor overcome these hurdles.&lt;/p&gt;

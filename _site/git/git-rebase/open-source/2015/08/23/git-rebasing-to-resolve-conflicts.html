@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Git Rebasing to Resolve Conflicts: Essentials for contributing</title>
+  <title>Git Rebasing to Resolve Conflicts</title>
   <meta name="description" content="Four years ago when I first started contributing to open-source projects git was new to me. I quicklygrasped committing files and pushing to a remote reposit...">
 
   <link rel="stylesheet" href="/css/main.css">
@@ -68,14 +68,13 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Git Rebasing to Resolve Conflicts: Essentials for contributing</h1>
+    <h1 class="post-title">Git Rebasing to Resolve Conflicts</h1>
     <p class="post-meta">Aug 23, 2015</p>
   </header>
 
   <article class="post-content">
     <p>Four years ago when I first started contributing to open-source projects git was new to me. I quickly
-grasped committing files and pushing to a remote repository. Other than the initial uneasiness with
-contributing code there was one thing that scared me. I was absolutely terrified of seeing the 
+grasped committing files and pushing to a remote repository. However, I was absolutely terrified of seeing the 
 message saying my code couldn&#39;t be merged.</p>
 
 <p><img src="http://blessing.io/images/merge_conflict.png" alt="Merge conflict"></p>
@@ -86,7 +85,7 @@ Many times I would fail and completely mess up my work. It was often easier to r
 work than to figure out how to rebase properly and get a clean set of commits pushed. </p>
 
 <p>Over time I learned some tricks and I now rebase with ease. I&#39;m sharing these tips hoping they help
-eliminate another hurdle new contributors face. After reading this post practice rebasing, be patient
+eliminate another hurdle new contributors face. After reading this post remember to practice rebasing, be patient
 and don&#39;t be afraid to ask for help. Project maintainers <em>should</em> be understanding and willing to 
 point you in the right direction.</p>
 
@@ -97,8 +96,8 @@ Another common type of rebase is an interactive rebase to squash commits. I will
 
 <p>These tips assume you have created a feature branch off of the master branch for a project. Additionally,
 <code>origin</code> refers to your fork while <code>upstream</code> refers to the original/upstream project. Both can (should)
-be configured as remotes for your git repository. See &quot;Configuring upstreams&quot;
-below for a tip on how to configure this, if you&#39;re not familiar with the concept.</p>
+be configured as remotes for your git repository. If you&#39;re not familiar with this concept see &quot;Configuring upstreams&quot;
+below for more information.</p>
 
 <p>First, ensure you have a clean state. That means you have either committed, stashed, or reverted any untracked
 changes. When you run <code>git status</code> you should see <code>nothing to commit, working directory clean</code>.</p>
@@ -143,15 +142,15 @@ quux
 =======
 bar
 baz
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; f78d8ae... Conflicting change
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; f78d8ae... &lt;commit message&gt; 
 </code></pre></div>
 <p>The changes between <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> and <code>=======</code> represent changes made in upstream master since your branch
 was checked out. Changes between <code>=======</code> and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; f78d8ae... &lt;commit message&gt;</code> represent
 changes in your branch. Git does not know which order these changes should go in. I cannot
-give you perfect advice on how to resolve any conflict. In some cases you will only want the old changes or 
-the new changes but not both. Over time you will gain a better understanding for how to resolve this 
-problem. In this case we want both changes but need to adjust ordering slightly. We remove the markers
-and make the &#39;code&#39; look like something we want:</p>
+give you perfect advice on how to resolve every conflict. You may only want the old changes, 
+the new changes, or both. Over time you will gain a better understanding for how to resolve this 
+problem. In this case we want both changes but need to adjust ordering slightly. Remove the markers
+and make the &#39;code&#39; look like something sensible:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">foo
 bar
 baz
@@ -161,12 +160,12 @@ quux
 <p>Commit this file as you normally would (<code>git add &lt;files&gt;; git commit -m &#39;commit message&#39;</code>) and then run 
 <code>git rebase --continue</code>. This will continue replaying commits until another conflict is encountered 
 or all commits have been replayed. Sometimes there
-are many conflicts that must be resolved but hopefully the rebase is smooth. Once complete, you will need
+are many conflicts that must be resolved but hopefully the rebase is smooth. </p>
+
+<p>Once complete, you will need
 to force push your feature branch to the <code>origin</code> (your fork) to update the merge request. Do this by 
 adding a <code>-f</code> flag to your push - <code>git push origin &lt;branch&gt; -f</code>. Always examine the merge request
-after this operation to ensure the commits and changes are what you expect. Note: Force pushing to your branch
-will update the merge request automatically. You do <em>not</em> need to close and create a new merge request. I&#39;ve seen
-contributors do this and it causes lots of confusion.</p>
+after this operation to ensure the commits and changes are what you expect. </p>
 
 <p>I hope this helps next time you have to rebase. Please send me a tweet if you have questions. I&#39;m happy to 
 help a new contributor overcome these hurdles.</p>
