@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Git Rebasing to Resolve Conflicts: Essentials for contributing</title>
+  <meta name="description" content="Four years ago when I first started contributing to open-source projects git was new to me. I quicklygrasped committing files and pushing to a remote reposit...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://blessing.io/git/git-rebase/open-source/2015/08/23/git-rebasing-to-resolve-conflicts.html">
+  <link rel="alternate" type="application/rss+xml" title="Drew Blessing" href="http://blessing.io/feed.xml" />
+</head>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64533648-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+  <body>
+
+    <header class="site-header navbar navbar-default navbar-fixed-top">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Drew Blessing</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+        
+        <a class="page-link" href="/about/">About</a>
+        
+        
+        
+        
+        
+        
+        
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper container">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Git Rebasing to Resolve Conflicts: Essentials for contributing</h1>
+    <p class="post-meta">Aug 23, 2015</p>
+  </header>
+
+  <article class="post-content">
+    <p>Four years ago when I first started contributing to open-source projects git was new to me. I quickly
+grasped committing files and pushing to a remote repository. Other than the initial uneasiness with
+contributing code there was one thing that scared me. I was absolutely terrified of seeing the 
+message saying my code couldn&#39;t be merged.</p>
+
+<p><img src="http://blessing.io/images/merge_conflict.png" alt="Merge conflict"></p>
+
+<p>Project maintainers would review my code 
+and then ask me to rebase so they could merge. Wiping away the sweat I would go to work rebasing. 
+Many times I would fail and completely mess up my work. It was often easier to redo the 
+work than to figure out how to rebase properly and get a clean set of commits pushed. </p>
+
+<p>Over time I learned some tricks and I now rebase with ease. I&#39;m sharing these tips hoping they help
+eliminate another hurdle new contributors face. After reading this post practice rebasing, be patient
+and don&#39;t be afraid to ask for help. Project maintainers <em>should</em> be understanding and willing to 
+point you in the right direction.</p>
+
+<p>In this post I will cover a &quot;standard&quot; rebase that will resolve merge conflict issues. 
+Another common type of rebase is an interactive rebase to squash commits. I will cover this in a future post.</p>
+
+<h2>Rebasing to resolve merge conflicts</h2>
+
+<p>These tips assume you have created a feature branch off of the master branch for a project. Additionally,
+<code>origin</code> refers to your fork while <code>upstream</code> refers to the original/upstream project. Both can (should)
+be configured as remotes for your git repository. See &quot;Configuring upstreams&quot;
+below for a tip on how to configure this, if you&#39;re not familiar with the concept.</p>
+
+<p>First, ensure you have a clean state. That means you have either committed, stashed, or reverted any untracked
+changes. When you run <code>git status</code> you should see <code>nothing to commit, working directory clean</code>.</p>
+
+<p>Next, switch to the master branch and pull upstream changes by running <code>git pull upstream master</code>.
+Switch back to your feature branch and initiate the rebase by running <code>git rebase master --preserve-merges</code>.
+If all is well you will see <code>Successfully rebased and updated refs/heads/&lt;branch&gt;</code>. If you see 
+an error you will need to resolve the conflicts, commit, and 
+continue the rebase. </p>
+
+<p>Before examining how to resolve conflicts I want to revisit the rebase command for a moment. What does
+<code>--preserve-merges</code> do? There are lots of details but one main reason I settled upon using
+this flag is that a merge preserving rebase considers a smaller set of commits for replay. Over time
+I had the most success (least nasty conflicts) by using this flag. This is certainly not required to
+do a normal rebase but I recommend trying it. If you&#39;re interested in the details this SO article titled
+<a href="http://stackoverflow.com/questions/15915430/what-exactly-does-gits-rebase-preserve-merges-do-and-why">What exactly does Git&#39;s &quot;rebase --preserve-merges&quot; do (and why?)</a>
+has a very in-depth explanation.</p>
+
+<p>To resolve any conflicts that occur during a rebase start by running <code>git status</code> to see what 
+conflicts are present. Conflicting files will appear under <code>unmerged paths:</code></p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ git status
+rebase in progress; onto 519c739
+You are currently rebasing branch &#39;changes&#39; on &#39;519c739&#39;.
+  (fix conflicts and then run &quot;git rebase --continue&quot;)
+  (use &quot;git rebase --skip&quot; to skip this patch)
+  (use &quot;git rebase --abort&quot; to check out the original branch)
+
+Unmerged paths:
+  (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)
+  (use &quot;git add &lt;file&gt;...&quot; to mark resolution)
+
+        both modified:   conflicting-file
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</code></pre></div>
+<p>By examining the <code>conflicting-file</code> contents we see a set of weird characters:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ cat conflicting-file 
+foo
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+qux
+quux
+=======
+bar
+baz
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; f78d8ae... Conflicting change
+</code></pre></div>
+<p>The changes between <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> and <code>=======</code> represent changes made in upstream master since your branch
+was checked out. Changes between <code>=======</code> and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; f78d8ae... &lt;commit message&gt;</code> represent
+changes in your branch. Git does not know which order these changes should go in. I cannot
+give you perfect advice on how to resolve any conflict. In some cases you will only want the old changes or 
+the new changes but not both. Over time you will gain a better understanding for how to resolve this 
+problem. In this case we want both changes but need to adjust ordering slightly. We remove the markers
+and make the &#39;code&#39; look like something we want:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">foo
+bar
+baz
+qux
+quux
+</code></pre></div>
+<p>Commit this file as you normally would (<code>git add &lt;files&gt;; git commit -m &#39;commit message&#39;</code>) and then run 
+<code>git rebase --continue</code>. This will continue replaying commits until another conflict is encountered 
+or all commits have been replayed. Sometimes there
+are many conflicts that must be resolved but hopefully the rebase is smooth. Once complete, you will need
+to force push your feature branch to the <code>origin</code> (your fork) to update the merge request. Do this by 
+adding a <code>-f</code> flag to your push - <code>git push origin &lt;branch&gt; -f</code>. Always examine the merge request
+after this operation to ensure the commits and changes are what you expect. Note: Force pushing to your branch
+will update the merge request automatically. You do <em>not</em> need to close and create a new merge request. I&#39;ve seen
+contributors do this and it causes lots of confusion.</p>
+
+<p>I hope this helps next time you have to rebase. Please send me a tweet if you have questions. I&#39;m happy to 
+help a new contributor overcome these hurdles.</p>
+
+<h2>Configuring upstreams</h2>
+
+<p>As mentioned earlier in this post, I recommend configuring your local git repository with both origin and
+upstream remotes. This allows easily merging upstream changes into your fork.</p>
+
+<p>Start by forking the project you want to contribute to. Do this in the web UI.
+Then, copy the clone URL of your fork. Clone the repository on your workstation with <code>git clone &lt;url&gt;</code>. This action
+will not only clone the repository but it will automatically configure your fork as the <code>origin</code> remote. Now
+we can add the upstream remote. First change into the repository you just cloned and run 
+<code>git remote add upstream &lt;upstream-url&gt;</code>. </p>
+
+<p>At this point you have two remotes configured. If you run <code>git pull upstream master</code> you will pull upstream
+changes into your local repository. You can then update your fork by running <code>git push origin master</code>. </p>
+
+<hr>
+
+<p>Unfortunately I don&#39;t have comments enabled on my blog yet. If you have comments, please send them to
+<a href="https://twitter.com/drewblessing">@drewblessing</a> on Twitter.</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Drew Blessing</li>
+          <li><a href="mailto:drew_web@blessing.io">drew_web@blessing.io</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/dblessing">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">dblessing</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/drewblessing">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">drewblessing</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">System Administrator by trade. Developer and open-source enthusiast at heart. Posts may cover DevOps, Chef, GitLab, Ruby, various open-source projects and whatever else I'm interested in at the time.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

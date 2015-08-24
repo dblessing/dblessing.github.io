@@ -1,42 +1,44 @@
 ---
 layout: post
-title:  "Git Rebasing: Essential for contributing"
-date:   2015-08-17 18:00:00
+title:  "Git Rebasing to Resolve Conflicts: Essentials for contributing"
+date:   2015-08-23je 18:00:00
 categories: git git-rebase open-source
 ---
 
 Four years ago when I first started contributing to open-source projects git was new to me. I quickly
 grasped committing files and pushing to a remote repository. Other than the initial uneasiness with
 contributing code there was one thing that scared me. I was absolutely terrified of seeing the 
-message saying my code couldn't be merged. Project maintainers would review my code 
+message saying my code couldn't be merged.
+
+![Merge conflict]({{ site.url }}/images/merge_conflict.png)
+
+Project maintainers would review my code 
 and then ask me to rebase so they could merge. Wiping away the sweat I would go to work rebasing. 
 Many times I would fail and completely mess up my work. It was often easier to redo the 
 work than to figure out how to rebase properly and get a clean set of commits pushed. 
 
-![Merge conflict](../images/merge_conflict.png)
-Merge conflict example from GitLab
+Over time I learned some tricks and I now rebase with ease. I'm sharing these tips hoping they help
+eliminate another hurdle new contributors face. After reading this post practice rebasing, be patient
+and don't be afraid to ask for help. Project maintainers *should* be understanding and willing to 
+point you in the right direction.
 
-Over time I learned some tricks and I now rebase with ease. I'm sharing these tips in hopes that
-this will take away another hurdle many new contributors face. After following these tips it will
-probably still take some practice. Be patient and most of all don't be afraid to ask for help.
-Project maintainers *should* be understanding and willing to point you in the right direction.
-
-In this post I will cover a "standard" rebase that will solve the merge conflict issues. 
-Another common type of rebase is an interactive rebase. I will cover this in a future post.
+In this post I will cover a "standard" rebase that will resolve merge conflict issues. 
+Another common type of rebase is an interactive rebase to squash commits. I will cover this in a future post.
 
 ## Rebasing to resolve merge conflicts
 
 These tips assume you have created a feature branch off of the master branch for a project. Additionally,
 `origin` refers to your fork while `upstream` refers to the original/upstream project. Both can (should)
-be configured as remotes for your git repository. See [Configuring upstreams](#configuring-upstreams)
+be configured as remotes for your git repository. See "Configuring upstreams"
 below for a tip on how to configure this, if you're not familiar with the concept.
 
 First, ensure you have a clean state. That means you have either committed, stashed, or reverted any untracked
 changes. When you run `git status` you should see `nothing to commit, working directory clean`.
+
 Next, switch to the master branch and pull upstream changes by running `git pull upstream master`.
 Switch back to your feature branch and initiate the rebase by running `git rebase master --preserve-merges`.
-Assuming all is well you will see `Successfully rebased and updated refs/heads/<branch>`. If you see 
-`error: could not apply f78d8ae... <commit message>` you will need to resolve the conflicts, commit, and 
+If all is well you will see `Successfully rebased and updated refs/heads/<branch>`. If you see 
+an error you will need to resolve the conflicts, commit, and 
 continue the rebase. 
 
 Before examining how to resolve conflicts I want to revisit the rebase command for a moment. What does
@@ -83,11 +85,11 @@ baz
 
 The changes between `<<<<<<< HEAD` and `=======` represent changes made in upstream master since your branch
 was checked out. Changes between `=======` and `>>>>>>> f78d8ae... <commit message>` represent
-changes in your branch. Git does not know which order these changes should go in. At this point I cannot
-give you perfect advice on how to resolve the conflict. In some cases you will only want the old changes 
-or the new changes but not both. Over time you will gain a better understanding for how to resolve this 
+changes in your branch. Git does not know which order these changes should go in. I cannot
+give you perfect advice on how to resolve any conflict. In some cases you will only want the old changes or 
+the new changes but not both. Over time you will gain a better understanding for how to resolve this 
 problem. In this case we want both changes but need to adjust ordering slightly. We remove the markers
-(the weird <<<, >>> and ==== lines) and make the 'code' look like something we want:
+and make the 'code' look like something we want:
 
 ```
 foo
@@ -103,9 +105,11 @@ or all commits have been replayed. Sometimes there
 are many conflicts that must be resolved but hopefully the rebase is smooth. Once complete, you will need
 to force push your feature branch to the `origin` (your fork) to update the merge request. Do this by 
 adding a `-f` flag to your push - `git push origin <branch> -f`. Always examine the merge request
-after this operation to ensure the commits and changes are what you expect.
+after this operation to ensure the commits and changes are what you expect. Note: Force pushing to your branch
+will update the merge request automatically. You do *not* need to close and create a new merge request. I've seen
+contributors do this and it causes lots of confusion.
 
-I hope this helps next time your have to rebase. Please send me a tweet if you have questions. I'm happy to 
+I hope this helps next time you have to rebase. Please send me a tweet if you have questions. I'm happy to 
 help a new contributor overcome these hurdles.
 
 ## Configuring upstreams
@@ -113,7 +117,7 @@ help a new contributor overcome these hurdles.
 As mentioned earlier in this post, I recommend configuring your local git repository with both origin and
 upstream remotes. This allows easily merging upstream changes into your fork.
 
-Start by forking the project you want to contribute to. Do this in the web UI (GitLab's web UI, for instance).
+Start by forking the project you want to contribute to. Do this in the web UI.
 Then, copy the clone URL of your fork. Clone the repository on your workstation with `git clone <url>`. This action
 will not only clone the repository but it will automatically configure your fork as the `origin` remote. Now
 we can add the upstream remote. First change into the repository you just cloned and run 
