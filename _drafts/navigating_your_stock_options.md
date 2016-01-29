@@ -31,12 +31,11 @@ Stock options should be evaluated as part of your larger compensation package.
 However, they should not be confused with salary. It's great that companies
 offer the option to invest in the company they are helping to grow.
 
-At the same time, you should treat the **incentive** stock options as just that
-- incentive. Incentive to help build a great company and make the stock worth
-something someday. Consider that your stock options have an effective net-zero
-value when they are granted. That is, they have are worth **number of shares
-times strike price** and you will have to pay that same price to exercise them
-today.
+Stock options should be seen as an incentive to help build a great company and
+make the stock worth something someday. Consider that your stock options have
+an effective net-zero value when they are granted. That is, they have are worth
+**number of shares times strike price** and you will have to pay that same price
+to exercise them today.
 
 ## Vesting
 
