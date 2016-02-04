@@ -12,7 +12,7 @@ it means for employees. There is still a lot of confusion around the topic.
 Part of the problem is that many of us have heard the terrible stories about
 early-stage startup employees who missed out on millions of dollars
 when their company sold or after the IPO because they couldn't afford to
-exercise their stock options. Maybe you saw the
+exercise their stock options. Or maybe you saw the
 [news about Good Technology](http://www.nytimes.com/2015/12/27/technology/when-a-unicorn-start-up-stumbles-its-employees-get-hurt.html?_r=0)
 where employees lost hundreds of thousands after their company sold.
 
@@ -21,21 +21,24 @@ or loses hundreds of thousands. That's why I set out to learn as much as I
 could about my stock options and what the best strategy is for __me__. I will
 share what I've learned and even try to provide some general advice or
 direction. However, it's important for you to understand that **I'm not an
-expert** on this topic and my advice is not substitute for a tax advisor. I
-spent many hours talking with my financial advisor and my accountant
-and you should, too.
+expert** on this topic and my advice is not substitute for a professional
+advisors. I spent several hours talking with my financial advisor and my
+accountant and you should, too.
+
+The advice here is based on U.S. tax law and incentive stock options (ISO).
+Options granted to employees in other countries will be under entirely different
+tax laws.
 
 ## Stock options are part of your compensation package
 
 Stock options should be evaluated as part of your larger compensation package.
-However, they should not be confused with salary. It's great that companies
-offer the option to invest in the company they are helping to grow.
+However, they should not be confused with salary.
+Stock options are an incentive to help build a great company which will make the
+stock worth something someday.
 
-Stock options should be seen as an incentive to help build a great company and
-make the stock worth something someday. Consider that your stock options have
-an effective net-zero value when they are granted. That is, they have are worth
-**number of shares times strike price** and you will have to pay that same price
-to exercise them today.
+Consider that your stock options have an effective net-zero value when they are
+granted. That is, they have are worth **number of shares times strike price**
+and you will have to pay that same price to exercise them today.
 
 ## Vesting
 
@@ -68,7 +71,7 @@ you purchase unvested shares. Remember what I said about unvested shares before?
 You're not entitled to them until they vest. If you choose to purchase early
 the company retains the right to repurchase those shares at strike price if
 you're terminated. Even if there is a spread between strike price and current
-market value the company will not repurchase the shares at the higher value.
+market value the company will repurchase the shares at the lower value.
 
 ## Taxes
 
@@ -106,7 +109,7 @@ amount says you must pay taxes on __at least__ $50,000 of your income. However,
 since your regular income amount is higher, you pay the higher amount.
 
 Now let's consider what happens if you exercise all of your options.
-Additionally, your company underwent 3 more large funding rounds and the market
+Additionally, your company underwent large funding rounds and the market
 value of the shares is now $10. Your shares are now worth $100,000. The spread
 is $95,000. Add this to your previous AMT and you have $145,000. Since the AMT
 amount is now higher than your regular income you trigger AMT. It means you pay
@@ -124,7 +127,9 @@ shares due to the tax burden, this is why.
 
 ## Limiting the tax burden
 
-Early exercise. If you purchase your options early and the strike price and
+## Early exercise
+
+If you purchase your options early and the strike price and
 market price are identical, or at least very close, you can avoid triggering
 AMT.
 
@@ -146,5 +151,42 @@ gains tax rate if/when you sell the shares. If you sell prior to the 1 and 2
 year timelines you will be taxes at your normal tax rate. The capital gains rate
 is 15% for people in the 25-35% tax bracket.
 
+### Exercise up to where AMT equals regular tax
+
+When you don't have the luxury of exercising your options before the market
+price increases you can purchase options up to the point where AMT is triggered.
+This limits your tax burden while still giving you flexibility. Still,
+the earlier the better if you choose this option. If your company does really
+well and the valuation increases too much you may have trouble exercising
+options while still avoiding AMT. Talk to your tax accountant
+for help calculating your current AMT so you know how many shares you can
+purchase.
+
+If you're early exercising your options when the market price is higher than
+the strike price be sure to file your 83(b) election just like you would
+with the early exercise when the prices were equal. Remember, filing this form
+means you intend to pay taxes up front as opposed to when the shares vest. You
+can reasonably assume that the spread will be higher when your shares vest
+than at the time you purchased. This decreases your chances of triggering AMT,
+too.
+
+An 83(b) election is not valid when purchasing fully-vested shares.
+
 ## Liquidity
 
+As long as your company is private you need to understand that your shares are
+not particularly liquid. That is, you can't easily sell them. When your company
+is public you can trade on the open market, freely. Private companies generally
+have a right to first refusal on any sale of their stock. This means you will
+have to give the company the option to purchase your shares back from you before
+you can offer to sell or give them to another party. You should expect to invest
+in your company for the long haul.
+
+## Final thoughts
+
+I definitely believe that early exercise is the way to go. I plan to exercise
+my options early, but in chunks. It's important to remember your options are
+not all or nothing. You can exercise in smaller chunks so you don't over-extend
+yourself. Remember to keep a level head and do what's best for you based on your
+current financial situation. **Never** take out a loan to exercise. That's way
+more risk than most people should be taking on.
