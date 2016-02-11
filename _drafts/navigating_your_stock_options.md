@@ -82,8 +82,8 @@ surpass value. Note that if you choose not to exercise your shares, there are no
 tax implications to be concerned with.
 
 The crux of the problem for employees is this thing called Alternative Minimum
-Tax (AMT). Most people have never heard of AMT because most of us don't make
-enough money or have enough investments to trigger AMT. If you exercise your
+Tax (AMT). Most people have never heard of AMT because we don't make
+enough money or have large investments to trigger AMT. If you exercise your
 shares and aren't careful, you could find yourself triggering AMT. Here's how.
 
 At the time your options are granted the market value and the strike price are
@@ -115,11 +115,16 @@ You are now required to pay an additional $11,700 in taxes assuming a 26%
 AMT rate. This is often referred to as a phantom income because you're paying taxes
 on income you haven't really realized yet.
 
+If you do trigger AMT there is a possibility that this payment will generate
+a tax credit in subsequent years. However, this depends on many factors including
+your personal financial situation and whether the company stock is worth more or
+less. I recommend assuming you will not receive a credit. 
+
 The above situation is pretty extreme. Most companies probably aren't going to
 rapidly achieve a $10 share price. But this is just an illustration. You may
 have been granted far more options, and at a different strike price than I
 mentioned. When you hear the stories about people being unable to exercise their
-shares due to the tax burden, this is why.
+shares due to the tax burden, this is why. 
 
 ## Limiting the tax burden
 
