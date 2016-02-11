@@ -21,8 +21,8 @@ or loses hundreds of thousands. That's why I set out to learn as much as I
 could about my stock options and what the best strategy is for __me__. I will
 share what I've learned and even try to provide some general advice or
 direction. However, it's important for you to understand that **I'm not an
-expert** on this topic and my advice is not substitute for a professional
-advisors. I spent several hours talking with my financial advisor and my
+expert** on this topic and my advice is not a substitute for professional
+advice. I spent several hours talking with my financial advisor and my
 accountant and you should, too.
 
 The advice here is based on U.S. tax law and incentive stock options (ISO).
@@ -37,7 +37,7 @@ Stock options are an incentive to help build a great company which will make the
 stock worth something someday.
 
 Consider that your stock options have an effective net-zero value when they are
-granted. That is, they have are worth **number of shares times strike price**
+granted. That is, they are worth **number of shares times exercise price**
 and you will have to pay that same price to exercise them today.
 
 ## Vesting
