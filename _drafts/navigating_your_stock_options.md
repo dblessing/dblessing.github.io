@@ -148,7 +148,7 @@ An added benefit of early exercise is that you start the capital gains clock
 early. If you hold on to your shares for at least 2 years from the date of
 grant and 1 year from the date of exercise, the IRS will tax you at the capital
 gains tax rate if/when you sell the shares. If you sell prior to the 1 and 2
-year timelines you will be taxes at your normal tax rate. The capital gains rate
+year timelines you will be taxed at your normal tax rate. The capital gains rate
 is 15% for people in the 25-35% tax bracket.
 
 ### Exercise up to where AMT equals regular tax
