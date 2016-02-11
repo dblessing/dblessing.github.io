@@ -113,12 +113,14 @@ $100,000 in regular taxable income plus $45,000 in AMT income. AMT tax rates
 are different than your normal tax rate and vary anywhere from 26% to 35%.
 You are now required to pay an additional $11,700 in taxes assuming a 26%
 AMT rate. This is often referred to as a phantom income because you're paying taxes
-on income you haven't really realized yet.
+on income you haven't really realized yet. 
 
-If you do trigger AMT there is a possibility that this payment will generate
-a tax credit in subsequent years. However, this depends on many factors including
-your personal financial situation and whether the company stock is worth more or
-less. I recommend assuming you will not receive a credit. 
+An additional note about AMT and taxes. If you exercise options and the stock price
+then decreases in the future, you can claim a tax credit for your investment loss
+on the price of the shares themselves. However, your AMT payment is not similarly 
+deductible. Don't confuse the two. There is an AMT credit that is available
+in some cases, at the sale of your stock. The specifics surrounding this are 
+complicated and beyond the scope of this post.
 
 The above situation is pretty extreme. Most companies probably aren't going to
 rapidly achieve a $10 share price. But this is just an illustration. You may
