@@ -36,10 +36,6 @@ However, they should not be confused with salary.
 Stock options are an incentive to help build a great company which will make the
 stock worth something someday.
 
-Consider that your stock options have an effective net-zero value when they are
-granted. That is, they are worth **number of shares times exercise price**
-and you will have to pay that same price to exercise them today.
-
 ## Vesting
 
 Your stock options probably have a vesting schedule that you need to be familiar
