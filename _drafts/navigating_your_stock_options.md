@@ -193,3 +193,9 @@ not all or nothing. You can exercise in smaller chunks so you don't over-extend
 yourself. Remember to keep a level head and do what's best for you based on your
 current financial situation. **Never** take out a loan to exercise. That's way
 more risk than most people should be taking on.
+
+Finally, thanks to GitLab's public handbook, you can see many of the specific
+details about the stock options they grant. Although your company may not be
+as open with the public, you should have access to similar information 
+accompanying your options grant. Be sure to refer to these documents when 
+trying to determine the best course of action for your situation.
