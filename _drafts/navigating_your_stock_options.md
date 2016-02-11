@@ -116,7 +116,7 @@ amount is now higher than your regular income you trigger AMT. It means you pay
 $100,000 in regular taxable income plus $45,000 in AMT income. AMT tax rates
 are different than your normal tax rate and vary anywhere from 26% to 35%.
 You are now required to pay an additional $11,700 in taxes assuming a 26%
-AMT rate. This is often referred to as a phantom tax because you're paying taxes
+AMT rate. This is often referred to as a phantom income because you're paying taxes
 on income you haven't really realized yet.
 
 The above situation is pretty extreme. Most companies probably aren't going to
