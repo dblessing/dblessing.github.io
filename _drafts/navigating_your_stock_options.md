@@ -127,7 +127,7 @@ shares due to the tax burden, this is why.
 
 ## Limiting the tax burden
 
-## Early exercise
+### Early exercise
 
 If you purchase your options early and the strike price and
 market price are identical, or at least very close, you can avoid triggering
