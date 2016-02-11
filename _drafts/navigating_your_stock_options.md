@@ -14,10 +14,10 @@ early-stage startup employees who missed out on millions of dollars
 when their company sold or after the IPO because they couldn't afford to
 exercise their stock options. Or maybe you saw the
 [news about Good Technology](http://www.nytimes.com/2015/12/27/technology/when-a-unicorn-start-up-stumbles-its-employees-get-hurt.html?_r=0)
-where employees lost hundreds of thousands after their company sold.
+where employees lost hundred thousands after their company sold.
 
 I think it's safe to say that none of us want to be the person who misses out
-or loses hundreds of thousands. That's why I set out to learn as much as I
+or loses a lot of money. That's why I set out to learn as much as I
 could about my stock options and what the best strategy is for __me__. I will
 share what I've learned and even try to provide some general advice or
 direction. However, it's important for you to understand that **I'm not an
