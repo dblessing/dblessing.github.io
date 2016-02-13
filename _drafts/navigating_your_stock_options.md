@@ -32,50 +32,62 @@ tax laws.
 ## Stock options are part of your compensation package
 
 Stock options should be evaluated as part of your larger compensation package.
-However, they should not be confused with salary.
-Stock options are an incentive to help build a great company which will make the
-stock worth something someday.
+However, they should not be confused with salary. 
+If employees own stock in their company, then in theory they are incentivized to 
+increase the value of the company, which will increase the value of your stocks. 
+Stock options give the option holder the option, but not the obligation, 
+to purchase the stock at specified future exercise dates. If the option holder 
+wants to purchase the stock, then they are said to have "exercised their option."
 
 ## Vesting
 
 Your stock options probably have a vesting schedule that you need to be familiar
-with. A common schedule is vesting over 4 years with a 1 year cliff. This means
+with. [Here is a quick explanation of why there is a vesting schedule](http://avc.com/2010/11/employee-equity-vesting/).
+A common schedule is vesting over 4 years with a 1 year cliff. This means
 that when you start at the company, although you were issued X number of
 options, you are not entitled to any of those options up front. After 1 year
-(the cliff) 25% of your options will vest - you're now entitled to them. Every
-month after the first year your options will vest monthly. You should
-vest approximately 2% of your remaining options per month for 3 years. By the
-end of year 4 you are 100% vested. If at any point during this vesting schedule
-you are terminated then your unvested options are forfeited immediately. You
+(the cliff) 25% of your options will vest - you're now entitled to the stock options. 
+The remaining unvested stock options are then vested monthly over the next three years, 
+based on this example. In other words, the monthly vesting rate is approximately 2% of 
+the remaining unvested stock options. At the end of your fourth year of employment, 
+you are 100% vested. If at any point during this vesting schedule
+you are terminated, then your unvested options are forfeited immediately. You
 are able to exercise (purchase) any vested shares for a defined period of time
 after your termination. The window is generally 90 days, which isn't a lot of
-time.
+time. **Note:** Your company may have different vesting schedules, forfeiture terms, 
+and exercise windows that you will need to be familiar with.
 
-It's important to understand the vesting schedule **and** the 90 day exercise
-window upon termination. I'm sure you don't plan to be fired or leave the
-company if you're just joining. However, if you are aware of your options
-and you plan wisely on when to exercise then it should not lead to extra
+Here is a chart showing the vesting schedule under this specific example.
+**[INSERT CHART I EMAILED YOU]**
+
+It's important to understand the vesting schedule **and** the length of the exercise
+window upon your voluntary departure or termination. I'm sure you don't plan to be fired or leave the
+company before your options are vested. However, if you are aware of your options
+and you plan wisely on when to exercise, then it should not lead to extra
 surprise.
 
 ## Early Exercise
 
-Some companies offer early exercise terms. Even though you have unvested shares,
-they will allow you to exercise the options before they vest. This is a really
-nice opportunity that companies offer because it starts the clock on some
-important tax rules. We'll discuss the tax rules later. There is a catch when
+Some companies offer early exercise terms. In general, this means that the company 
+will allow you to exercise some of the options that have not yet vested. This is a nice 
+opportunity that companies offer because it starts the clock on some
+important tax rules, which I will discuss shortly. Although, there is a catch when
 you purchase unvested shares. Remember what I said about unvested shares before?
 You're not entitled to them until they vest. If you choose to purchase early
 the company retains the right to repurchase those shares at strike price if
 you're terminated. Even if there is a spread between strike price and current
-market value the company will repurchase the shares at the lower value.
+market value the company will repurchase the shares at the lower value, because 
+this is what you paid for them.
 
 ## Taxes
 
 Taxes are probably the place you need to spend the most time scrutinizing the
-details. The reason people can't afford to exercise their shares is probably
-because of taxes. It's hard to understand because the strike price of
-options is usually so low. Let's lay out a scenario. You were granted the option
-to purchase 10,000 shares at .50 per share. That's $5,000. Many employees can
+details. You may not be able to afford the costs associated with exercising your 
+options. Why? Taxes. It's hard to understand because the strike price of
+options is usually very low. 
+
+Let's lay out a scenario. You were granted the option to purchase 10,000 shares 
+at $0.50 per share. That's $5,000. Many employees can
 save up $5,000 to exercise shares at some point - no problem. However, in some
 situations the taxes as a result of exercising those shares could **far**
 surpass value. Note that if you choose not to exercise your shares, there are no
@@ -86,47 +98,60 @@ Tax (AMT). Most people have never heard of AMT because we don't make
 enough money or have large investments to trigger AMT. If you exercise your
 shares and aren't careful, you could find yourself triggering AMT. Here's how.
 
-At the time your options are granted the market value and the strike price are
+At the time your options are granted, the market value and the strike price are
 the same. If the company goes through additional funding rounds, gets acquired,
-or goes through an IPO the market value of the stock will (probably) increase.
+or goes through an IPO, the market value of your stock will (hopefully) increase.
 The difference between the new market price and your strike price is called the
-spread. The IRS views this spread as a sort of income, even though you don't
-receive any money in your pocket as a result. Whether this 'income' causes tax
-problems for you is complicated. The spread will not be calculated as regular,
-salary type income for your normal tax calculations. However, it is part of the
-AMT calculation.
+spread. The IRS views this spread as a type of income, even though you don't
+receive any cash flow. Whether this 'income' causes tax problems for you is 
+complicated. The spread will not be calculated as regular, salary type income 
+for your normal tax calculations. However, it is part of the AMT calculation.
 
 I don't fully understand how to calculate AMT but I can give you some rough
-examples of what it might look like. For easy comparison let's consider that
+examples of what it might look like. Let's consider a simplified example where 
 you earn an annual salary of $100,000. You pay income tax on this amount. Most
 people have an AMT amount that is lower than their salary. Let's say your AMT
 tax amount is $50,000 when we don't consider your shares. In this case the AMT
 amount says you must pay taxes on __at least__ $50,000 of your income. However,
 since your regular income amount is higher, you pay the higher amount.
 
-Now let's consider what happens if you exercise all of your options.
-Additionally, your company underwent large funding rounds and the market
-value of the shares is now $10. Your shares are now worth $100,000. The spread
-is $95,000. Add this to your previous AMT and you have $145,000. Since the AMT
-amount is now higher than your regular income you trigger AMT. It means you pay
-$100,000 in regular taxable income plus $45,000 in AMT income. AMT tax rates
-are different than your normal tax rate and vary anywhere from 26% to 35%.
-You are now required to pay an additional $11,700 in taxes assuming a 26%
-AMT rate. This is often referred to as a phantom income because you're paying taxes
-on income you haven't really realized yet. 
+Now let's consider what happens if you exercise all 10,000 of your options at a 
+strike price of $0.50 per share. The market value of your stock is $5,000. 
+Additionally, your company has completed funding rounds after you exercised 
+all of your options. So, each of your shares now has a market value of $10 
+(i.e. your shares are now worth $100,000). The spread is $95,000. Add this 
+to your previous AMT and you have $145,000. Since the AMT amount is now 
+higher than your regular income you trigger the AMT. This means you 
+will pay taxes on your normal income—the salary of $100,000—and pay taxes based on 
+your AMT 'income', which is $45,000. The taxable portion of the AMT amount 
+is the difference between the AMT amount and your salary. AMT tax rates
+are different than your usual income tax rate. They can vary anywhere from 26% to 35%.
+You are now required to pay an additional $11,700 to $15,750 in taxes. This is 
+often referred to as a phantom income because you're paying taxes on income 
+you haven't actually received yet. 
 
 An additional note about AMT and taxes. If you exercise options and the stock price
 then decreases in the future, you can claim a tax credit for your investment loss
 on the price of the shares themselves. However, your AMT payment is not similarly 
 deductible. Don't confuse the two. There is an AMT credit that is available
 in some cases, at the sale of your stock. The specifics surrounding this are 
-complicated and beyond the scope of this post.
+complicated and beyond the scope of this post. 
 
 The above situation is pretty extreme. Most companies probably aren't going to
 rapidly achieve a $10 share price. But this is just an illustration. You may
 have been granted far more options, and at a different strike price than I
 mentioned. When you hear the stories about people being unable to exercise their
-shares due to the tax burden, this is why. 
+shares due to the tax burden, the AMT is the reason why. 
+
+The possibility of the market 
+value of your shares decreasing is a very real possibility. This is [what happened 
+to the employees of Good Technology](http://www.nytimes.com/2015/12/27/technology/when-a-unicorn-start-up-stumbles-its-employees-get-hurt.html) 
+that I mentioned previously. The employees' stock value was crippled by the acquisition 
+price that was lower than previous valuations. In addition, their stock was further impacted by 
+liquidation preferences of the investors (i.e. Venture Capitalists). You should read more 
+about [preferred stock](http://avc.com/2011/07/financing-options-preferred-stock/) 
+and [the dangers—to common stockholders—of liquidiation preferences](http://venturebeat.com/2010/08/16/beware-the-trappings-of-liquidation-preference/) 
+to understand how this happened to the Good employees.
 
 ## Limiting the tax burden
 
