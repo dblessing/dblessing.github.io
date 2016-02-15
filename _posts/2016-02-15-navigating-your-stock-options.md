@@ -5,7 +5,7 @@ date:   2016-02-15 12:00:00
 categories: startups stock-options
 ---
 
-Last September I joined a startup and received stock options. I knew what
+Last September I joined the GitLab team and received stock options. I knew what
 that meant at a very basic level but I didn't have a clue about the details.
 I've also noticed a lot more discussion on Twitter about stock options and what
 it means for employees. There is still a lot of confusion around the topic.
@@ -37,7 +37,7 @@ If employees own stock in their company, in theory they are incentivized to help
 increase the value of the company, which will increase the value of your stock.
 Stock options give the holder the option, but not the obligation,
 to purchase the stock in the future. If the option holder
-purchases the stock they are said to have "exercised their option."
+purchases the stock they are said to have "exercised their options."
 
 ## Vesting
 
@@ -87,9 +87,9 @@ surpass value. Note that if you choose not to exercise your shares, there are no
 tax implications to be concerned with.
 
 The crux of the problem for employees is this thing called Alternative Minimum
-Tax (AMT). Most people have never heard of AMT because we don't make
-enough money or have large investments to trigger AMT. If you exercise your
-shares and aren't careful, you could find yourself triggering AMT. Here's how.
+Tax (AMT). Most people have never heard of AMT because they don't make
+enough money or have large investments to trigger AMT. You could find yourself
+triggering AMT if you exercise your shares and aren't careful,  Here's how.
 
 At the time your options are granted, the market value and the strike price are
 the same. If the company goes through additional funding rounds, gets acquired,
@@ -121,18 +121,18 @@ to 35%. You are now required to pay an additional $11,700 to $15,750 in taxes.
 This is often referred to as a phantom income tax because you're paying taxes
 on income you haven't actually realized yet.
 
-An additional note about AMT and taxes. If you exercise options and the stock price
-then decreases in the future, you can claim a tax credit for your investment loss
-on the price of the shares themselves. However, your AMT payment is not similarly 
-deductible. Don't confuse the two. There is an AMT credit that is available
-in some cases, at the sale of your stock. The specifics surrounding this are 
-complicated and beyond the scope of this post.
-
 The above situation is pretty extreme. Most companies probably aren't going to
 rapidly achieve a $10 share price. But this is just an illustration. You may
 have been granted far more options, and at a different strike price than I
 mentioned. When you hear the stories about people being unable to exercise their
-shares due to the tax burden, this is why. 
+shares due to the tax burden, this is why.
+
+**An additional note about AMT and taxes:** If you exercise options and the
+stock price then decreases in the future, you can claim a tax credit for your
+investment loss on the price of the shares themselves. However, your AMT payment
+is not similarly deductible. Don't confuse the two. There is an AMT credit that
+is available in some cases, at the sale of your stock. The specifics surrounding
+this are complicated and beyond the scope of this post.
 
 ## Limiting the tax burden
 
@@ -200,8 +200,15 @@ yourself. Remember to keep a level head and do what's best for you based on your
 current financial situation. **Never** take out a loan to exercise. That's way
 more risk than most people should be taking on.
 
-Finally, thanks to GitLab's public handbook, you can see many of the specific
-details about the stock options they grant. Although your company may not be
-as open with the public, you should have access to similar information 
-accompanying your options grant. Be sure to refer to these documents when 
-trying to determine the best course of action for your situation.
+Finally, thanks to [GitLab's public handbook](https://about.gitlab.com/handbook/),
+you can see many of the specific details about the
+[employee stock options](https://about.gitlab.com/handbook/stock-options/) they
+grant. Although your company may not be as open with the public, you should have
+access to similar information accompanying your options grant. Be sure to refer
+to these documents when trying to determine the best course of action for your
+situation.
+
+* * *
+
+Unfortunately I don't have comments enabled on my blog yet. If you have comments,
+please send them to [@drewblessing](https://twitter.com/drewblessing) on Twitter.
