@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Navigating your Stock Options"
-date:   2016-01-15 18:00:00
+date:   2016-02-15 12:00:00
 categories: startups stock-options
 ---
 
@@ -33,8 +33,11 @@ tax laws.
 
 Stock options should be evaluated as part of your larger compensation package.
 However, they should not be confused with salary.
-Stock options are an incentive to help build a great company which will make the
-stock worth something someday.
+If employees own stock in their company, in theory they are incentivized to help
+increase the value of the company, which will increase the value of your stock.
+Stock options give the holder the option, but not the obligation,
+to purchase the stock in the future. If the option holder
+purchases the stock they are said to have "exercised their option."
 
 ## Vesting
 
@@ -43,8 +46,8 @@ with. A common schedule is vesting over 4 years with a 1 year cliff. This means
 that when you start at the company, although you were issued X number of
 options, you are not entitled to any of those options up front. After 1 year
 (the cliff) 25% of your options will vest - you're now entitled to them. Every
-month after the first year your options will vest monthly. You should
-vest approximately 2% of your remaining options per month for 3 years. By the
+month after the first year your options will vest monthly. This means your
+remaining options vest at approximately 2% per month. By the
 end of year 4 you are 100% vested. If at any point during this vesting schedule
 you are terminated then your unvested options are forfeited immediately. You
 are able to exercise (purchase) any vested shares for a defined period of time
@@ -72,10 +75,12 @@ market value the company will repurchase the shares at the lower value.
 ## Taxes
 
 Taxes are probably the place you need to spend the most time scrutinizing the
-details. The reason people can't afford to exercise their shares is probably
-because of taxes. It's hard to understand because the strike price of
-options is usually so low. Let's lay out a scenario. You were granted the option
-to purchase 10,000 shares at .50 per share. That's $5,000. Many employees can
+details. You may not be able to afford the costs associated with exercising your
+options. Why? Taxes. It's hard to understand because the strike price of
+options is usually very low.
+
+Let's lay out a scenario. You were granted the option to purchase 10,000 shares
+at $0.50 per share. That's $5,000. Many employees can
 save up $5,000 to exercise shares at some point - no problem. However, in some
 situations the taxes as a result of exercising those shares could **far**
 surpass value. Note that if you choose not to exercise your shares, there are no
@@ -86,9 +91,9 @@ Tax (AMT). Most people have never heard of AMT because we don't make
 enough money or have large investments to trigger AMT. If you exercise your
 shares and aren't careful, you could find yourself triggering AMT. Here's how.
 
-At the time your options are granted the market value and the strike price are
+At the time your options are granted, the market value and the strike price are
 the same. If the company goes through additional funding rounds, gets acquired,
-or goes through an IPO the market value of the stock will (probably) increase.
+or goes through an IPO, the market value of your stock will (hopefully) increase.
 The difference between the new market price and your strike price is called the
 spread. The IRS views this spread as a sort of income, even though you don't
 receive any money in your pocket as a result. Whether this 'income' causes tax
@@ -97,23 +102,24 @@ salary type income for your normal tax calculations. However, it is part of the
 AMT calculation.
 
 I don't fully understand how to calculate AMT but I can give you some rough
-examples of what it might look like. For easy comparison let's consider that
+examples of what it might look like. Let's consider a simplified example where
 you earn an annual salary of $100,000. You pay income tax on this amount. Most
 people have an AMT amount that is lower than their salary. Let's say your AMT
 tax amount is $50,000 when we don't consider your shares. In this case the AMT
 amount says you must pay taxes on __at least__ $50,000 of your income. However,
 since your regular income amount is higher, you pay the higher amount.
 
-Now let's consider what happens if you exercise all of your options.
+Now let's consider what happens if you exercise all 10,000 of your options at
+the strike price of $0.50 per share. The exercise price of your shares is $5,000.
 Additionally, your company underwent large funding rounds and the market
 value of the shares is now $10. Your shares are now worth $100,000. The spread
 is $95,000. Add this to your previous AMT and you have $145,000. Since the AMT
 amount is now higher than your regular income you trigger AMT. It means you pay
-$100,000 in regular taxable income plus $45,000 in AMT income. AMT tax rates
-are different than your normal tax rate and vary anywhere from 26% to 35%.
-You are now required to pay an additional $11,700 in taxes assuming a 26%
-AMT rate. This is often referred to as a phantom income because you're paying taxes
-on income you haven't really realized yet. 
+$100,000 in regular taxable income from your salary plus $45,000 in AMT income.
+AMT tax rates are different than your normal tax rate and vary anywhere from 26%
+to 35%. You are now required to pay an additional $11,700 to $15,750 in taxes.
+This is often referred to as a phantom income tax because you're paying taxes
+on income you haven't actually realized yet.
 
 An additional note about AMT and taxes. If you exercise options and the stock price
 then decreases in the future, you can claim a tax credit for your investment loss
