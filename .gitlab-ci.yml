@@ -1,5 +1,4 @@
 image: ruby:2.1
-
 pages:
   script:
   - gem install jekyll
